@@ -8,4 +8,8 @@ AlarmClock.prototype.checkAlarm = function(){
   return this.hour + ":" + this.minute + " " + this.test;
 };
 
+AlarmClock.prototype.checkIfSame = function(time){
+  return this.checkAlarm() === time;
+};
+
 exports.alarmModule = AlarmClock;

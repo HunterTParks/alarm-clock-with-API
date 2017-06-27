@@ -7,4 +7,10 @@ CurrentTimeModule.prototype.currentTime = function() {
   return moment().format("LT");
 };
 
+CurrentTimeModule.prototype.currentSeconds = function() {
+  return moment().format("LTS");
+};
+
+
+
 exports.currentTimeModule = CurrentTimeModule;

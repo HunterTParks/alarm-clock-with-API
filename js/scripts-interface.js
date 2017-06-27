@@ -3,23 +3,23 @@ var AlarmClock = require('./../js/alarm.js').alarmModule;
 
 $(document).ready(function() {
   var displayCurrentTime = new CurrentTimeModule();
-  var isAlarmMade = false;
-  console.log(isAlarmMade);
   var alarmClock = new AlarmClock("test", "test", "test");
+  $('.display-time').text(displayCurrentTime.currentTime);
   setInterval(function(){
     $('.display-time').empty();
     $('.display-time').text(displayCurrentTime.currentTime);
     console.log("HELLO!");
-    if(isAlarmMade === true)
+    if(alarmClock.checkIfSame(displayCurrentTime.currentTime()))
     {
-      console.log(alarmClock.checkAlarm());
-      console.log(displayCurrentTime.currentTime());
-      if(alarmClock.checkAlarm() == displayCurrentTime.currentTime())
-      {
-        alert("ALARM");
-      }
+      $('.initially-hidden').show();
     }
-  }, 1000);
+  }, 10000);
+
+
+  // setInterval(function() {
+  //   console.log(displayCurrentTime.currentSeconds());
+  // }, 1000);
+
   $('.alarm').submit(function(event){
     console.log("TEST");
     event.preventDefault();
@@ -27,6 +27,5 @@ $(document).ready(function() {
     var minutes = $('#minutes').val();
     var amorpm = $('#amorpm').val();
     alarmClock = new AlarmClock(hours, minutes, amorpm);
-    isAlarmMade = true;
   });
 });
