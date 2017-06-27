@@ -1,7 +1,11 @@
 var AlarmClock = function(hours, minutes, amorpm){
-  var alarm =
-}
+  this.hour = hours;
+  this.minute = minutes;
+  this.test = amorpm;
+};
 
-AlarmClock.prototype.setAlarm(hours, minutes, amorpm){
+AlarmClock.prototype.checkAlarm = function(){
+  return this.hour + ":" + this.minute + " " + this.test;
+};
 
-}
+exports.alarmModule = AlarmClock;

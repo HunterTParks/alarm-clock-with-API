@@ -4,7 +4,7 @@ var CurrentTimeModule = function() {
 };
 
 CurrentTimeModule.prototype.currentTime = function() {
-  return moment().format("LTS");
+  return moment().format("LT");
 };
 
 exports.currentTimeModule = CurrentTimeModule;
