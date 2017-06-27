@@ -5,3 +5,22 @@
 @import "layout/main";
 @import "pages/main";
 @import "themes/main";
+
+$gray : #d3d3d3;
+$green : #75B975;
+
+.box {
+  background: $gray;
+  border: 3px solid black;
+  padding: 40px 80px;
+  .button {
+    font-weight: bold;
+    text-align: center;
+    background: $green;
+    color: white;
+  }
+}
+
+.initially-hidden {
+  display: none;
+}
