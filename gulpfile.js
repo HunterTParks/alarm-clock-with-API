@@ -13,7 +13,8 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var moment = require('moment');
 moment().format();
-
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 // var lib = require('bower-files')();
 // USE THIS INSTEAD FOR LIB IF YOU INSTALL BOOTSTRAP
